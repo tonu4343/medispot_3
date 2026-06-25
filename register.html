@@ -3,105 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>会員登録 | MediSpot</title>
-  <link rel="stylesheet" href="style.css">
+  <title>MediSpot | 会員登録</title>
+  <link rel="stylesheet" href="medispot-register.css">
 </head>
 <body>
-  <header class="site-header simple-header">
-    <a class="brand" href="index.html"><span class="brand-mark">＋</span>MediSpot</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">＋</span>
+        <span>MediSpot</span>
+      </a>
+      <div class="header-links">
+        <a class="btn secondary" href="index.html#jobs">求人を見る</a>
+        <a class="btn primary" href="register-seeker.html">無料登録</a>
+      </div>
+    </div>
   </header>
 
-  <main class="auth-page">
-    <section class="auth-card">
-      <h1>会員登録</h1>
-      <p>求職者または求人者を選択して登録してください。</p>
+  <main class="page">
+    <div class="shell hero">
+      <section class="intro" aria-labelledby="register-title">
+        <span class="eyebrow">登録タイプを選択</span>
+        <h1 id="register-title">あなたに合う登録から始めましょう。</h1>
+        <p class="lead">求職者と医療機関では必要な情報が違います。最初に登録タイプを選ぶことで、入力項目を短く、次の行動をわかりやすくできます。</p>
+        <ul class="note-list">
+          <li><span>1</span>求職者はプロフィールと希望条件を登録</li>
+          <li><span>2</span>医療機関は施設情報と採用ニーズを登録</li>
+          <li><span>3</span>登録後に求人応募または求人掲載へ進めます</li>
+        </ul>
+      </section>
 
-      <form id="registerForm">
-        <div class="role-select">
-          <label><input type="radio" name="role" value="seeker" checked> 求職者</label>
-          <label><input type="radio" name="role" value="employer"> 求人者</label>
-        </div>
+      <section class="choice-grid" aria-label="登録タイプ">
+        <article class="choice-card">
+          <div class="choice-icon">人</div>
+          <h2>求職者として登録</h2>
+          <p>スポット勤務、週1日、業務委託など、医療資格を活かせる求人を探したい方向けです。</p>
+          <ul>
+            <li>職種・資格情報を登録</li>
+            <li>希望エリアと勤務条件を設定</li>
+            <li>気になる求人へすぐ応募</li>
+          </ul>
+          <a class="btn primary" href="register-seeker.html">求職者登録へ</a>
+        </article>
 
-        <div class="form-group">
-          <label for="name">氏名 / 担当者名</label>
-          <input type="text" id="name" autocomplete="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">メールアドレス</label>
-          <input type="email" id="email" autocomplete="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="password">パスワード</label>
-          <input type="password" id="password" autocomplete="new-password" minlength="8" required>
-        </div>
-
-        <div id="seekerFields">
-          <div class="form-group">
-            <label for="category">保有資格（職種）</label>
-            <select id="category">
-              <option value="">選択してください</option>
-              <option>看護師</option>
-              <option>臨床検査技師</option>
-              <option>診療放射線技師</option>
-              <option>理学療法士</option>
-              <option>作業療法士</option>
-              <option>言語聴覚士</option>
-              <option>ヘルパー</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="employerFields" hidden>
-          <div class="form-group">
-            <label for="organizationName">医療機関名</label>
-            <input type="text" id="organizationName">
-          </div>
-
-          <div class="form-group">
-            <label for="facility">施設区分</label>
-            <select id="facility">
-              <option value="">選択してください</option>
-              <option>病院</option>
-              <option>クリニック</option>
-              <option>調剤薬局</option>
-              <option>介護施設</option>
-              <option>健診センター</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="address">所在地</label>
-            <input type="text" id="address">
-          </div>
-        </div>
-
-        <button type="submit" class="button button-teal auth-submit">登録する</button>
-
-        <p class="auth-link">
-          すでにアカウントをお持ちの方は
-          <a href="login.html">ログイン</a>
-        </p>
-      </form>
-    </section>
+        <article class="choice-card employer">
+          <div class="choice-icon">院</div>
+          <h2>医療機関として登録</h2>
+          <p>急募、単発、非常勤、業務委託など、医療専門職を採用したい施設・法人向けです。</p>
+          <ul>
+            <li>施設・担当者情報を登録</li>
+            <li>募集職種と採用課題を整理</li>
+            <li>無料で求人掲載を開始</li>
+          </ul>
+          <a class="btn secondary" href="register-employer.html">医療機関登録へ</a>
+        </article>
+      </section>
+    </div>
   </main>
 
-  <script>
-    const roleRadios = document.querySelectorAll('input[name="role"]');
-    const seekerFields = document.getElementById("seekerFields");
-    const employerFields = document.getElementById("employerFields");
-
-    roleRadios.forEach((radio) => {
-      radio.addEventListener("change", () => {
-        const isSeeker = radio.value === "seeker";
-        seekerFields.hidden = !isSeeker;
-        employerFields.hidden = isSeeker;
-      });
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase.js"></script>
-  <script src="register.js"></script>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>＋ MediSpot</span>
+      <span>© 2026 MediSpot. All Rights Reserved.</span>
+    </div>
+  </footer>
 </body>
 </html>

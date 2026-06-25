@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | 医療機関登録</title>
+  <link rel="stylesheet" href="medispot-register.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">＋</span>
+        <span>MediSpot</span>
+      </a>
+      <div class="header-links">
+        <a class="btn secondary" href="register.html">登録タイプを選ぶ</a>
+        <a class="btn primary" href="register-seeker.html">求職者はこちら</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell form-layout">
+      <section class="form-card" aria-labelledby="employer-title">
+        <div class="form-head">
+          <div>
+            <h1 id="employer-title">医療機関登録</h1>
+            <p>施設情報と採用ニーズを登録して、求人掲載をスムーズに始めます。</p>
+          </div>
+          <span class="role-pill employer">医療機関</span>
+        </div>
+
+        <form id="registerForm" action="#" method="post">
+          <input type="hidden" name="role" value="employer">
+          <h2 class="section-title">施設情報</h2>
+          <div class="field-grid">
+            <div class="field full">
+              <label for="facility-name">施設・法人名</label>
+              <input id="facility-name" name="facility_name" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="facility-type">施設種別</label>
+              <select id="facility-type" name="facility_type" required>
+                <option value="">選択してください</option>
+                <option>病院</option>
+                <option>クリニック</option>
+                <option>調剤薬局</option>
+                <option>介護施設</option>
+                <option>健診センター</option>
+                <option>訪問医療</option>
+                <option>その他</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="facility-area">所在地</label>
+              <input id="facility-area" name="facility_area" placeholder="例：東京都新宿区" required>
+            </div>
+            <div class="field">
+              <label for="website">Webサイト</label>
+              <input id="website" name="website" type="url" placeholder="https://">
+            </div>
+            <div class="field">
+              <label for="facility-phone">代表電話</label>
+              <input id="facility-phone" name="facility_phone" type="tel">
+            </div>
+          </div>
+
+          <h2 class="section-title">担当者情報</h2>
+          <div class="field-grid">
+            <div class="field">
+              <label for="contact-name">担当者名</label>
+              <input id="contact-name" name="contact_name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="department">部署・役職</label>
+              <input id="department" name="department" placeholder="例：人事課 / 院長">
+            </div>
+            <div class="field">
+              <label for="email">メールアドレス</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="password">パスワード</label>
+              <input id="password" name="password" type="password" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <h2 class="section-title">採用ニーズ</h2>
+          <div class="field-grid">
+            <div class="field">
+              <label for="hire-profession">募集予定職種</label>
+              <select id="hire-profession" name="hire_profession">
+                <option>看護師</option>
+                <option>臨床検査技師</option>
+                <option>診療放射線技師</option>
+                <option>理学療法士</option>
+                <option>作業療法士</option>
+                <option>言語聴覚士</option>
+                <option>ヘルパー</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="hire-style">募集形態</label>
+              <select id="hire-style" name="hire_style">
+                <option>スポット勤務</option>
+                <option>非常勤</option>
+                <option>業務委託</option>
+                <option>複数名を継続募集</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="needs">採用課題・相談内容</label>
+              <textarea id="needs" name="needs" placeholder="例：毎週土曜午前の採血対応、急な欠員補充、訪問リハビリ案件など"></textarea>
+            </div>
+          </div>
+
+          <label class="check-row">
+            <input type="checkbox" required>
+            <span>利用規約とプライバシーポリシーに同意します。</span>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">無料で掲載準備を始める</button>
+            <a class="btn secondary" href="register.html">戻る</a>
+          </div>
+        </form>
+      </section>
+
+      <aside>
+        <section class="aside-card">
+          <h2>掲載開始まで</h2>
+          <ol class="mini-steps">
+            <li><span>1</span>施設情報を登録</li>
+            <li><span>2</span>求人条件を入力</li>
+            <li><span>3</span>応募者を確認</li>
+            <li><span>4</span>面談・採用</li>
+          </ol>
+        </section>
+        <section class="aside-card">
+          <h2>成功報酬型</h2>
+          <p>求人掲載は無料。採用が決定した場合のみ、成功報酬が発生します。</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>＋ MediSpot</span>
+      <span>© 2026 MediSpot. All Rights Reserved.</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

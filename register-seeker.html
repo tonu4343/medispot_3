@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | 求職者登録</title>
+  <link rel="stylesheet" href="medispot-register.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">＋</span>
+        <span>MediSpot</span>
+      </a>
+      <div class="header-links">
+        <a class="btn secondary" href="register.html">登録タイプを選ぶ</a>
+        <a class="btn primary" href="register-employer.html">採用担当者はこちら</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell form-layout">
+      <section class="form-card" aria-labelledby="seeker-title">
+        <div class="form-head">
+          <div>
+            <h1 id="seeker-title">求職者登録</h1>
+            <p>医療資格と希望条件を登録して、スポット求人を探しやすくします。</p>
+          </div>
+          <span class="role-pill">求職者</span>
+        </div>
+
+        <form id="registerForm" action="#" method="post">
+          <input type="hidden" name="role" value="seeker">
+          <h2 class="section-title">アカウント情報</h2>
+          <div class="field-grid">
+            <div class="field">
+              <label for="last-name">姓</label>
+              <input id="last-name" name="last_name" autocomplete="family-name" required>
+            </div>
+            <div class="field">
+              <label for="first-name">名</label>
+              <input id="first-name" name="first_name" autocomplete="given-name" required>
+            </div>
+            <div class="field full">
+              <label for="email">メールアドレス</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="password">パスワード</label>
+              <input id="password" name="password" type="password" autocomplete="new-password" required>
+            </div>
+            <div class="field">
+              <label for="phone">電話番号</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <h2 class="section-title">資格・希望条件</h2>
+          <div class="field-grid">
+            <div class="field">
+              <label for="profession">職種</label>
+              <select id="profession" name="profession" required>
+                <option value="">選択してください</option>
+                <option>看護師</option>
+                <option>臨床検査技師</option>
+                <option>診療放射線技師</option>
+                <option>理学療法士</option>
+                <option>作業療法士</option>
+                <option>言語聴覚士</option>
+                <option>ヘルパー</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="license">資格番号</label>
+              <input id="license" name="license_number" placeholder="後から登録も可能">
+            </div>
+            <div class="field">
+              <label for="area">希望勤務地</label>
+              <input id="area" name="area" placeholder="例：東京都、神奈川県">
+            </div>
+            <div class="field">
+              <label for="work-style">希望勤務形態</label>
+              <select id="work-style" name="work_style">
+                <option>スポット勤務</option>
+                <option>週1日から</option>
+                <option>午前・午後のみ</option>
+                <option>業務委託</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">希望条件・自己紹介</label>
+              <textarea id="message" name="message" placeholder="勤務可能な曜日、経験領域、希望時給など"></textarea>
+            </div>
+          </div>
+
+          <label class="check-row">
+            <input type="checkbox" required>
+            <span>利用規約とプライバシーポリシーに同意します。</span>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">無料で登録する</button>
+            <a class="btn secondary" href="register.html">戻る</a>
+          </div>
+        </form>
+      </section>
+
+      <aside>
+        <section class="aside-card">
+          <h2>登録後の流れ</h2>
+          <ol class="mini-steps">
+            <li><span>1</span>プロフィール入力</li>
+            <li><span>2</span>求人検索・保存</li>
+            <li><span>3</span>応募・面談</li>
+            <li><span>4</span>勤務開始</li>
+          </ol>
+        </section>
+        <section class="aside-card">
+          <h2>登録は無料</h2>
+          <p>求人検索、応募、プロフィール作成は無料で利用できます。</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>＋ MediSpot</span>
+      <span>© 2026 MediSpot. All Rights Reserved.</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

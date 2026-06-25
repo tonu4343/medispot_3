@@ -1,10 +1,31 @@
-document.getElementById("registerForm").addEventListener("submit", async (event) => {
+const form = document.getElementById("registerForm");
+
+function valueOf(id) {
+  const element = document.getElementById(id);
+  return element ? element.value.trim() : "";
+}
+
+function selectedRole() {
+  const roleInput = document.querySelector('input[name="role"]');
+  return roleInput ? roleInput.value : "seeker";
+}
+
+function displayNameFor(role) {
+  if (role === "employer") {
+    return valueOf("facility-name") || valueOf("contact-name") || valueOf("name");
+  }
+  const fullName = `${valueOf("last-name")} ${valueOf("first-name")}`.trim();
+  return fullName || valueOf("name");
+}
+
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const role = document.querySelector('input[name="role"]:checked').value;
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
+  const role = selectedRole();
+  const name = displayNameFor(role);
+  const email = valueOf("email");
+  const passwordInput = document.getElementById("password");
+  const password = passwordInput ? passwordInput.value : "";
 
   const { data, error } = await supabaseClient.auth.signUp({
     email,
@@ -30,7 +51,7 @@ document.getElementById("registerForm").addEventListener("submit", async (event)
   });
 
   if (profileError) {
-    alert("プロフィール登録に失敗しました。");
+    alert("プロフィール登録に失敗しました。時間をおいて再度お試しください。");
     return;
   }
 
