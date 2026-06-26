@@ -171,7 +171,7 @@ a { color: inherit; text-decoration: none; }
   margin-top: 32px;
   min-height: 208px;
   display: grid;
-  grid-template-columns: minmax(240px, 320px) 1fr 390px;
+  grid-template-columns: minmax(260px, 320px) minmax(280px, 1fr) minmax(300px, 390px);
   color: #fff;
   background: linear-gradient(110deg, #008276, #00a297);
   overflow: hidden;
@@ -185,6 +185,7 @@ a { color: inherit; text-decoration: none; }
 .price-copy { align-self: center; padding: 24px 30px; }
 .price-copy h2 { margin: 0 0 7px; font-size: 25px; }
 .price-copy p { margin: 0 0 15px; font-size: 12px; }
+.price-box, .price-copy, .device-art { min-width: 0; }
 .device-art { display: flex; align-items: flex-end; justify-content: center; overflow: hidden; padding-top: 16px; }
 .device-art img { width: 255px; max-width: 65%; object-fit: contain; }
 .device-art img + img { width: 190px; margin-left: -85px; }
@@ -264,7 +265,7 @@ footer { padding: 24px 0 10px; }
   .hero-background { left: 34%; opacity: .65; }
   .hero { background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,.96) 42%, rgba(255,255,255,.2) 100%); }
   .profession-grid { grid-template-columns: repeat(4, 1fr); }
-  .pricing { grid-template-columns: 280px 1fr; }
+  .pricing { grid-template-columns: minmax(240px, 300px) minmax(360px, 1fr); }
   .device-art { display: none; }
   .testimonial-grid { grid-template-columns: 1fr; }
 }
