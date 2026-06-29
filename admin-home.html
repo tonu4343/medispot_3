@@ -1,16 +1,16 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MediSpot | 管理者モック</title>
+  <title>MediSpot | 管理者ダッシュボード</title>
   <link rel="stylesheet" href="medispot-app.css">
 </head>
 <body>
   <header class="app-header">
     <div class="shell header-inner">
       <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
-      <span class="user-pill">管理者</span>
+      <span class="user-pill admin-pill">管理者：運営担当</span>
       <nav class="app-nav" aria-label="管理者メニュー">
         <a class="active" href="admin-home.html">管理画面</a>
         <a href="seeker-home.html">求職者画面</a>
@@ -21,26 +21,71 @@
   </header>
 
   <main class="page">
-    <div class="shell">
-      <div class="page-head">
-        <h1>管理者モック</h1>
-        <p>求職者・求人者・求人掲載の状況を一覧で確認するための簡易画面です。</p>
-      </div>
-      <section class="grid-3">
-        <article class="card stat-card"><strong>24</strong><span>登録求職者</span></article>
-        <article class="card stat-card orange"><strong>8</strong><span>登録医療機関</span></article>
-        <article class="card stat-card green"><strong>7</strong><span>公開中求人</span></article>
-      </section>
-      <section class="card panel" style="margin-top: 34px;">
-        <h2>確認タスク</h2>
-        <ul class="side-list">
-          <li><span>1</span>新規登録ユーザーの確認</li>
-          <li><span>2</span>求人内容の確認</li>
-          <li><span>3</span>応募・マッチング状況の確認</li>
-        </ul>
+    <div class="shell admin-layout">
+      <aside class="card admin-sidebar">
+        <h2>管理メニュー</h2>
+        <a class="active" href="admin-home.html">ダッシュボード</a>
+        <a href="admin-seekers.html">求職者管理</a>
+        <a href="admin-employers.html">医療機関管理</a>
+        <a href="admin-jobs.html">求人管理</a>
+        <a href="admin-applications.html">応募・選考管理</a>
+        <a href="admin-payments.html">成功報酬管理</a>
+      </aside>
+
+      <section class="admin-main">
+        <div class="listing-head">
+          <div>
+            <span class="eyebrow-lite">Admin Panel</span>
+            <h1>管理者ダッシュボード</h1>
+            <p>求職者・医療機関・求人・応募状況をまとめて確認します。</p>
+          </div>
+          <a class="btn secondary" href="admin-jobs.html">求人審査へ</a>
+        </div>
+
+        <section class="metric-strip admin-metrics" aria-label="管理指標">
+          <article><strong>24</strong><span>登録求職者</span></article>
+          <article><strong>8</strong><span>登録医療機関</span></article>
+          <article><strong>7</strong><span>公開中求人</span></article>
+          <article><strong>3</strong><span>応募総数</span></article>
+        </section>
+
+        <section class="grid-2 admin-panels">
+          <article class="card panel">
+            <h2>本日の確認タスク</h2>
+            <ul class="side-list">
+              <li><span>1</span>審査待ち医療機関 2件を確認</li>
+              <li><span>2</span>新規求人 3件の掲載内容を確認</li>
+              <li><span>3</span>成立案件 2件の請求状態を確認</li>
+            </ul>
+          </article>
+          <article class="card panel">
+            <h2>最近の動き</h2>
+            <div class="activity-list">
+              <p><strong>10:20</strong> ブランチ総合クリニックが求人を作成</p>
+              <p><strong>11:05</strong> 佐藤 花子さんが外来看護師求人へ応募</p>
+              <p><strong>13:40</strong> 理学療法士求人でマッチング成立</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="card admin-table-card">
+          <div class="section-title-row">
+            <h2>審査待ち一覧</h2>
+            <a href="admin-employers.html">すべて見る</a>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>種別</th><th>名称</th><th>内容</th><th>状態</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr><td>医療機関</td><td>南町内科クリニック</td><td>新規登録確認</td><td><span class="status-pill warning">審査中</span></td><td><a href="admin-employers.html">確認</a></td></tr>
+                <tr><td>求人</td><td>外来看護師 週3日</td><td>掲載内容確認</td><td><span class="status-pill warning">審査中</span></td><td><a href="admin-jobs.html">確認</a></td></tr>
+                <tr><td>成功報酬</td><td>PT採用成立</td><td>請求準備</td><td><span class="status-pill">未請求</span></td><td><a href="admin-payments.html">確認</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </section>
     </div>
   </main>
 </body>
 </html>
-

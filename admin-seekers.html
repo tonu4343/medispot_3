@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | 求職者管理</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
+      <span class="user-pill admin-pill">管理者：運営担当</span>
+      <nav class="app-nav" aria-label="管理者メニュー">
+        <a href="admin-home.html">管理画面</a>
+        <a href="seeker-home.html">求職者画面</a>
+        <a href="employer-home.html">求人者画面</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell admin-layout">
+      <aside class="card admin-sidebar">
+        <h2>管理メニュー</h2>
+        <a href="admin-home.html">ダッシュボード</a>
+        <a class="active" href="admin-seekers.html">求職者管理</a>
+        <a href="admin-employers.html">医療機関管理</a>
+        <a href="admin-jobs.html">求人管理</a>
+        <a href="admin-applications.html">応募・選考管理</a>
+        <a href="admin-payments.html">成功報酬管理</a>
+      </aside>
+
+      <section class="admin-main">
+        <div class="listing-head">
+          <div>
+            <span class="eyebrow-lite">Users</span>
+            <h1>求職者管理</h1>
+            <p>求職者の登録情報、資格、プロフィール状態を確認します。</p>
+          </div>
+        </div>
+        <section class="card search-panel">
+          <div class="job-search manager-search">
+            <div class="field"><label for="q">名前・メール</label><input id="q" placeholder="佐藤 花子"></div>
+            <div class="field"><label for="job">職種</label><select id="job"><option>すべて</option><option>看護師</option><option>理学療法士</option></select></div>
+            <div class="field"><label for="status">状態</label><select id="status"><option>すべて</option><option>有効</option><option>確認待ち</option></select></div>
+            <button class="btn primary" type="button">検索</button>
+          </div>
+        </section>
+        <section class="card admin-table-card">
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>氏名</th><th>職種</th><th>経験</th><th>プロフィール</th><th>状態</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr><td>佐藤 花子</td><td>看護師</td><td>7〜9年</td><td>78%</td><td><span class="status-pill green">有効</span></td><td><button class="table-btn">詳細</button></td></tr>
+                <tr><td>山田 太郎</td><td>理学療法士</td><td>3〜6年</td><td>64%</td><td><span class="status-pill green">有効</span></td><td><button class="table-btn">詳細</button></td></tr>
+                <tr><td>鈴木 一郎</td><td>放射線技師</td><td>10年以上</td><td>92%</td><td><span class="status-pill warning">確認待ち</span></td><td><button class="table-btn">詳細</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
