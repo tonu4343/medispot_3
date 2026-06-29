@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -22,34 +22,71 @@
   </header>
 
   <main class="page">
-    <div class="shell">
-      <div class="page-head">
-        <h1>ようこそ、佐藤 花子 さん</h1>
-        <p>求職者マイページ（ホーム）</p>
-      </div>
+    <div class="shell app-board">
+      <aside class="card profile-panel">
+        <div class="avatar-mark">佐</div>
+        <h1>佐藤 花子 さん</h1>
+        <p>看護師 / 外来経験 8年</p>
+        <div class="profile-meter"><span style="width: 78%;"></span></div>
+        <small>プロフィール完成度 78%</small>
+        <div class="profile-actions">
+          <a class="btn primary" href="seeker-profile.html">プロフィール編集</a>
+          <a class="btn secondary" href="seeker-resume.html">履歴書を更新</a>
+        </div>
+      </aside>
 
-      <section class="grid-3" aria-label="利用状況">
-        <article class="card stat-card"><strong>1</strong><span>応募中の求人</span></article>
-        <article class="card stat-card orange"><strong>0</strong><span>マッチング成立</span></article>
-        <article class="card stat-card green"><strong>7</strong><span>掲載中の求人</span></article>
-      </section>
+      <section class="board-main">
+        <div class="dashboard-hero seeker-hero">
+          <div>
+            <span class="eyebrow-lite">おすすめ求人</span>
+            <h2>希望条件に近い求人が見つかっています</h2>
+            <p>日勤のみ、週3日、世田谷区周辺の求人を中心に表示しています。</p>
+          </div>
+          <a class="btn primary" href="seeker-jobs.html">求人を探す</a>
+        </div>
 
-      <section class="grid-2" style="margin-top: 34px;" aria-label="メニュー">
-        <a class="card quick-card" href="seeker-profile.html">
-          <span class="quick-icon">📋</span>
-          <span><h2>スキル・プロフィール登録</h2><p>資格・経験・希望条件・資格証を登録</p></span>
-        </a>
-        <a class="card quick-card" href="seeker-resume.html">
-          <span class="quick-icon">📄</span>
-          <span><h2>履歴書・職務経歴書</h2><p>学歴・職歴・免許資格・自己PRを登録</p></span>
-        </a>
-        <a class="card quick-card" href="seeker-jobs.html">
-          <span class="quick-icon">🔍</span>
-          <span><h2>求人検索・一覧</h2><p>職種・雇用形態・キーワードで求人を探す</p></span>
-        </a>
+        <section class="metric-strip" aria-label="利用状況">
+          <article><strong>1</strong><span>応募中</span></article>
+          <article><strong>4</strong><span>保存候補</span></article>
+          <article><strong>7</strong><span>新着求人</span></article>
+        </section>
+
+        <section class="card search-panel" aria-label="クイック検索">
+          <div class="job-search compact-search">
+            <div class="field"><label for="keyword">キーワード</label><input id="keyword" placeholder="外来、日勤のみ、土日休み"></div>
+            <div class="field"><label for="area">勤務地</label><input id="area" placeholder="東京都世田谷区"></div>
+            <a class="btn primary" href="seeker-jobs.html">検索</a>
+          </div>
+          <div class="chip-row popular-chips">
+            <span class="chip selected">日勤のみ</span>
+            <span class="chip">週3日〜</span>
+            <span class="chip">ブランクOK</span>
+            <span class="chip">高時給</span>
+          </div>
+        </section>
+
+        <section class="board-section">
+          <div class="section-title-row">
+            <h2>おすすめ求人</h2>
+            <a href="seeker-jobs.html">一覧を見る</a>
+          </div>
+          <div class="job-list">
+            <article class="card job-card feature-job">
+              <div class="tag-row"><span class="tag blue">看護師</span><span class="tag">非常勤</span><span class="tag orange">時給 2,200円〜2,600円</span></div>
+              <h3>【日勤のみ】外来看護師（ブランクOK・週3日〜）</h3>
+              <div class="job-meta"><span>ブランチ総合クリニック</span><span>東京都世田谷区 / 掲載日：2026/05/12</span></div>
+              <div class="job-footer"><span class="status-pill">応募済み</span><a class="btn secondary" href="seeker-job-detail.html">詳細を見る</a></div>
+            </article>
+            <article class="card job-card feature-job">
+              <div class="tag-row"><span class="tag blue">放射線技師</span><span class="tag">非常勤</span><span class="tag orange">時給 2,100円〜2,500円</span></div>
+              <h3>放射線技師（健診・一般撮影／土日休み）</h3>
+              <div class="job-meta"><span>ブランチ総合クリニック</span><span>東京都杉並区 / 掲載日：2026/05/20</span></div>
+              <div class="job-footer"><span class="status-pill">条件一致 92%</span><a class="btn primary" href="seeker-job-detail.html">詳細を見る</a></div>
+            </article>
+          </div>
+        </section>
       </section>
     </div>
   </main>
 </body>
 </html>
-

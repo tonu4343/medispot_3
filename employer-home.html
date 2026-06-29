@@ -21,51 +21,65 @@
   </header>
 
   <main class="page">
-    <div class="shell">
-      <div class="page-head employer-head">
-        <h1>ブランチ総合クリニック 様</h1>
-        <p>求人者マイページ（ホーム）</p>
-      </div>
-
-      <section class="notice-list" aria-label="お知らせ">
-        <div class="notice-card match">
-          <span>🎉</span>
-          <p>「理学療法士（PT）（整形外科クリニック・新設リハ室）」で <strong>田中 太郎</strong> さんとのマッチングが成立しました！</p>
-          <a href="employer-jobs.html">通知を確認／チャットルームへ</a>
+    <div class="shell app-board">
+      <aside class="card profile-panel employer-panel">
+        <div class="avatar-mark employer-avatar">院</div>
+        <h1>ブランチ総合クリニック</h1>
+        <p>クリニック / 無床 / 東京都</p>
+        <div class="profile-meter"><span style="width: 86%;"></span></div>
+        <small>施設情報完成度 86%</small>
+        <div class="profile-actions">
+          <a class="btn primary employer-btn" href="employer-job-new.html">求人を作成</a>
+          <a class="btn secondary" href="employer-jobs.html">掲載求人を見る</a>
         </div>
-        <div class="notice-card match">
-          <span>🎉</span>
-          <p>「放射線技師（健診・一般撮影／土日休み）」で <strong>鈴木 一郎</strong> さんとのマッチングが成立しました！</p>
-          <a href="employer-jobs.html">通知を確認／チャットルームへ</a>
+      </aside>
+
+      <section class="board-main">
+        <div class="dashboard-hero employer-hero">
+          <div>
+            <span class="eyebrow-lite">採用ダッシュボード</span>
+            <h2>選考待ちの応募があります</h2>
+            <p>求人ごとの応募状況を確認して、面談調整へ進めましょう。</p>
+          </div>
+          <a class="btn primary employer-btn" href="employer-jobs.html">応募者を確認</a>
         </div>
-        <div class="notice-card info">
-          <span>✉️</span>
-          <p>選考待ちの応募が <strong>1件</strong> あります。</p>
-          <a href="employer-jobs.html">掲載求人管理から確認する</a>
-        </div>
-      </section>
 
-      <section class="grid-3" aria-label="求人状況">
-        <article class="card stat-card green"><strong>7</strong><span>掲載中の求人</span></article>
-        <article class="card stat-card"><strong>1</strong><span>選考中の応募者</span></article>
-        <article class="card stat-card orange"><strong>2</strong><span>マッチング成立</span></article>
-      </section>
+        <section class="metric-strip employer-strip" aria-label="求人状況">
+          <article><strong>7</strong><span>掲載中求人</span></article>
+          <article><strong>1</strong><span>選考待ち</span></article>
+          <article><strong>2</strong><span>成立</span></article>
+        </section>
 
-      <section class="grid-2" style="margin-top: 34px;" aria-label="求人者メニュー">
-        <a class="card quick-card" href="employer-job-new.html">
-          <span class="quick-icon">📝</span>
-          <span><h2>求人広告 新規作成</h2><p>掲載は無料。採用決定時のみ成功報酬が発生します。</p></span>
-        </a>
-        <a class="card quick-card" href="employer-jobs.html">
-          <span class="quick-icon">📄</span>
-          <span><h2>掲載求人管理・一覧</h2><p>掲載中の求人確認と応募者の選考を行います。</p></span>
-        </a>
-      </section>
+        <section class="notice-list compact-notices" aria-label="お知らせ">
+          <div class="notice-card match">
+            <span>成</span>
+            <p>「理学療法士（PT）」で <strong>田中 太郎</strong> さんとのマッチングが成立しました。</p>
+            <a href="employer-jobs.html">確認する</a>
+          </div>
+          <div class="notice-card info">
+            <span>選</span>
+            <p>「外来看護師」に選考待ちの応募が <strong>1件</strong> あります。</p>
+            <a href="employer-applicants.html">応募者を見る</a>
+          </div>
+        </section>
 
-      <footer class="mock-footer">
-        <span>医療特化型広告マッチングシステム プロトタイプ V1</span>
-        <a href="admin-home.html">デモデータを初期化</a>
-      </footer>
+        <section class="board-section">
+          <div class="section-title-row">
+            <h2>採用メニュー</h2>
+            <span class="section-note">よく使う操作</span>
+          </div>
+          <div class="grid-2">
+            <a class="card quick-card operation-card" href="employer-job-new.html">
+              <span class="quick-icon">作</span>
+              <span><h2>求人広告 新規作成</h2><p>職種・給与・勤務地・仕事内容を入力して掲載します。</p></span>
+            </a>
+            <a class="card quick-card operation-card" href="employer-jobs.html">
+              <span class="quick-icon">管</span>
+              <span><h2>掲載求人管理</h2><p>求人ごとの応募数、選考状況、掲載状態を確認します。</p></span>
+            </a>
+          </div>
+        </section>
+      </section>
     </div>
   </main>
 </body>
