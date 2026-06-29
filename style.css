@@ -172,11 +172,12 @@ a { color: inherit; text-decoration: none; }
   min-height: 208px;
   display: grid;
   grid-template-columns: minmax(260px, 320px) minmax(280px, 1fr) minmax(300px, 390px);
+  padding-inline: max(24px, calc((100vw - 1160px) / 2));
   color: #fff;
   background: linear-gradient(110deg, #008276, #00a297);
   overflow: hidden;
 }
-.price-box { margin: 16px 0 16px max(24px, calc((100vw - 1160px) / 2)); padding: 18px; text-align: center; color: var(--ink); background: #fff; border-radius: 8px; }
+.price-box { margin: 16px 0; padding: 18px; text-align: center; color: var(--ink); background: #fff; border-radius: 8px; }
 .price-box h3 { margin: 0 0 2px; color: var(--teal); }
 .price-box p, .price-box small { margin: 0; font-size: 12px; }
 .price-box small { display: block; font-weight: 800; }
@@ -265,7 +266,7 @@ footer { padding: 24px 0 10px; }
   .hero-background { left: 34%; opacity: .65; }
   .hero { background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,.96) 42%, rgba(255,255,255,.2) 100%); }
   .profession-grid { grid-template-columns: repeat(4, 1fr); }
-  .pricing { grid-template-columns: minmax(240px, 300px) minmax(360px, 1fr); }
+  .pricing { grid-template-columns: minmax(240px, 300px) minmax(360px, 1fr); padding-inline: 24px; }
   .device-art { display: none; }
   .testimonial-grid { grid-template-columns: 1fr; }
 }
