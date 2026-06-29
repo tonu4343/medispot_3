@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | スキル・プロフィール登録</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">🏥</span><span>メディスポット</span></a>
+      <span class="user-pill">求職者：佐藤 花子</span>
+      <nav class="app-nav" aria-label="求職者メニュー">
+        <a href="seeker-home.html">マイページ</a>
+        <a class="active" href="seeker-profile.html">プロフィール</a>
+        <a href="seeker-resume.html">履歴書・職務経歴</a>
+        <a href="seeker-jobs.html">求人検索</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell content-grid">
+      <section>
+        <div class="page-head">
+          <h1>スキル・プロフィール登録</h1>
+          <p>入力した内容は応募時に医療機関へ提示されます。</p>
+        </div>
+        <form class="card panel">
+          <div class="form-grid">
+            <div class="field full">
+              <label for="license-type">保有資格（職種）<span class="required">必須</span></label>
+              <select id="license-type">
+                <option>看護師</option>
+                <option>臨床検査技師</option>
+                <option>診療放射線技師</option>
+                <option>理学療法士</option>
+                <option>作業療法士</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="license-name">資格名称（詳細）</label>
+              <input id="license-name" value="正看護師">
+            </div>
+            <div class="field">
+              <label for="birth">生年月日<span class="required">必須</span></label>
+              <input id="birth" value="1991/08/15">
+              <p class="field-help">年齢：34歳（生年月日から自動計算）</p>
+            </div>
+            <div class="field">
+              <label for="experience">実務経験年数</label>
+              <select id="experience"><option>7〜9年</option><option>10年以上</option><option>3〜6年</option></select>
+              <p class="field-help">選択した資格・職種での実務経験年数を選んでください。</p>
+            </div>
+            <div class="field full">
+              <label>スキル・経験（複数選択可）</label>
+              <div class="chip-row">
+                <label class="chip selected"><input type="checkbox" checked>一般病棟</label>
+                <label class="chip"><input type="checkbox">ICU/CCU</label>
+                <label class="chip selected"><input type="checkbox" checked>クリニック</label>
+                <label class="chip"><input type="checkbox">健康診断施設</label>
+                <label class="chip"><input type="checkbox">訪問看護</label>
+                <label class="chip"><input type="checkbox">高齢者施設</label>
+                <label class="chip"><input type="checkbox">その他（自由記載）</label>
+              </div>
+            </div>
+            <div class="field full">
+              <label for="work-style">希望雇用形態</label>
+              <select id="work-style"><option>スポット（単発）</option><option>非常勤</option><option>業務委託</option></select>
+            </div>
+            <div class="field full">
+              <label for="zip">居住地（郵便番号から検索）</label>
+              <div class="form-grid">
+                <input id="zip" value="1540001">
+                <button class="btn secondary" type="button">住所を検索</button>
+              </div>
+              <select><option>東京都世田谷区池尻</option></select>
+            </div>
+            <div class="field full">
+              <label for="profile-pr">自己PR</label>
+              <textarea id="profile-pr">総合病院の外来で8年勤務。ブランクなし。週3日程度の日勤勤務を希望しています。</textarea>
+            </div>
+            <div class="field full">
+              <label>資格証の画像アップロード（複数可）</label>
+              <div class="upload-box">クリックして資格証（免許証）の画像をアップロード<br>（JPG / PNG・複数選択できます）</div>
+              <div class="file-list">
+                <div class="file-row"><span>🔒 看護師免許証.jpg（登録日 2026/06/10）</span><button class="btn danger" type="button">削除</button></div>
+                <div class="file-row"><span>🔒 BLSプロバイダーカード.jpg（登録日 2026/06/10）</span><button class="btn danger" type="button">削除</button></div>
+              </div>
+              <p class="field-help">プロトタイプのためファイル名のみ保存します（モック）。</p>
+            </div>
+          </div>
+          <div class="actions"><button class="btn primary" type="button">プロフィールを保存する</button></div>
+        </form>
+      </section>
+
+      <aside class="card panel">
+        <h2>入力ポイント</h2>
+        <ul class="side-list">
+          <li><span>1</span>資格と経験年数を先に登録</li>
+          <li><span>2</span>勤務可能エリアを明確にする</li>
+          <li><span>3</span>資格証を登録すると応募がスムーズ</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

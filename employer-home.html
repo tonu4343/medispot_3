@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | 求人者マイページ</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">🏥</span><span>メディスポット</span></a>
+      <span class="user-pill">求人者：ブランチ総合クリニック</span>
+      <nav class="app-nav" aria-label="求人者メニュー">
+        <a class="active" href="employer-home.html">マイページ</a>
+        <a href="employer-job-post.html">求人作成</a>
+        <a href="employer-applicants.html">応募者確認</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell">
+      <div class="page-head">
+        <h1>ブランチ総合クリニック 管理ページ</h1>
+        <p>求人掲載状況と応募者の進捗を確認できます。</p>
+      </div>
+      <section class="grid-3">
+        <article class="card stat-card"><strong>3</strong><span>掲載中の求人</span></article>
+        <article class="card stat-card orange"><strong>5</strong><span>未確認の応募</span></article>
+        <article class="card stat-card green"><strong>2</strong><span>面談予定</span></article>
+      </section>
+      <section class="grid-2" style="margin-top: 34px;">
+        <a class="card quick-card" href="employer-job-post.html"><span class="quick-icon">📝</span><span><h2>求人を作成する</h2><p>職種・勤務条件・給与を登録</p></span></a>
+        <a class="card quick-card" href="employer-applicants.html"><span class="quick-icon">👤</span><span><h2>応募者を確認する</h2><p>プロフィール・履歴書・資格証を確認</p></span></a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

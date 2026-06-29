@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | 管理者モック</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">🏥</span><span>メディスポット</span></a>
+      <span class="user-pill">管理者</span>
+      <nav class="app-nav" aria-label="管理者メニュー">
+        <a class="active" href="admin-home.html">管理画面</a>
+        <a href="seeker-home.html">求職者画面</a>
+        <a href="employer-home.html">求人者画面</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell">
+      <div class="page-head">
+        <h1>管理者モック</h1>
+        <p>求職者・求人者・求人掲載の状況を一覧で確認するための簡易画面です。</p>
+      </div>
+      <section class="grid-3">
+        <article class="card stat-card"><strong>24</strong><span>登録求職者</span></article>
+        <article class="card stat-card orange"><strong>8</strong><span>登録医療機関</span></article>
+        <article class="card stat-card green"><strong>7</strong><span>公開中求人</span></article>
+      </section>
+      <section class="card panel" style="margin-top: 34px;">
+        <h2>確認タスク</h2>
+        <ul class="side-list">
+          <li><span>1</span>新規登録ユーザーの確認</li>
+          <li><span>2</span>求人内容の確認</li>
+          <li><span>3</span>応募・マッチング状況の確認</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
