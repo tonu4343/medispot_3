@@ -385,6 +385,16 @@ textarea:focus {
   font-weight: 650;
 }
 
+.mock-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.mock-links .btn {
+  width: 100%;
+}
+
 .mini-steps {
   display: grid;
   gap: 12px;
