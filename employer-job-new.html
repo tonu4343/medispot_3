@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | 求人広告 新規作成</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
+      <span class="user-pill employer">求人者：ブランチ総合クリニック</span>
+      <nav class="app-nav" aria-label="求人者メニュー">
+        <a href="employer-home.html">マイページ</a>
+        <a class="active" href="employer-job-new.html">求人作成</a>
+        <a href="employer-jobs.html">掲載求人管理</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell narrow-shell">
+      <div class="page-head">
+        <h1>求人広告 新規作成</h1>
+        <p>掲載は無料です。採用が決定した時点で成功報酬（¥55,000 税込）が発生します。</p>
+      </div>
+
+      <form class="card panel job-new-form">
+        <div class="form-grid">
+          <div class="field full">
+            <label for="job-title">求人タイトル <span class="required">必須</span></label>
+            <input id="job-title" placeholder="例）【日勤のみ】外来看護師（週3日〜）">
+          </div>
+          <div class="field">
+            <label for="profession">募集職種 <span class="required">必須</span></label>
+            <select id="profession">
+              <option>看護師</option>
+              <option>臨床検査技師</option>
+              <option>放射線技師</option>
+              <option>理学療法士（PT）</option>
+              <option>作業療法士（OT）</option>
+              <option>言語聴覚士（ST）</option>
+              <option>ヘルパー</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="work-type">雇用形態 <span class="required">必須</span></label>
+            <select id="work-type">
+              <option>常勤</option>
+              <option>非常勤</option>
+              <option>スポット</option>
+              <option>業務委託</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="salary">給与 <span class="required">必須</span></label>
+            <input id="salary" placeholder="例）時給 2,200円〜2,600円／月給 28万円〜">
+          </div>
+          <div class="field full">
+            <label for="area">勤務地 <span class="required">必須</span></label>
+            <input id="area" placeholder="例）東京都世田谷区">
+          </div>
+          <div class="field full">
+            <label for="description">仕事内容 <span class="required">必須</span></label>
+            <textarea id="description" placeholder="業務内容、勤務時間、職場環境などをご記入ください。"></textarea>
+          </div>
+          <div class="field full">
+            <label for="requirements">応募要件</label>
+            <textarea id="requirements" placeholder="必要な資格・経験などをご記入ください。"></textarea>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn primary employer-btn" type="button">この内容で掲載する</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

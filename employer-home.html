@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -10,11 +10,11 @@
   <header class="app-header">
     <div class="shell header-inner">
       <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
-      <span class="user-pill">求人者：ブランチ総合クリニック</span>
+      <span class="user-pill employer">求人者：ブランチ総合クリニック</span>
       <nav class="app-nav" aria-label="求人者メニュー">
         <a class="active" href="employer-home.html">マイページ</a>
-        <a href="employer-job-post.html">求人作成</a>
-        <a href="employer-applicants.html">応募者確認</a>
+        <a href="employer-job-new.html">求人作成</a>
+        <a href="employer-jobs.html">掲載求人管理</a>
         <a href="login.html">ログアウト</a>
       </nav>
     </div>
@@ -22,21 +22,51 @@
 
   <main class="page">
     <div class="shell">
-      <div class="page-head">
-        <h1>ブランチ総合クリニック 管理ページ</h1>
-        <p>求人掲載状況と応募者の進捗を確認できます。</p>
+      <div class="page-head employer-head">
+        <h1>ブランチ総合クリニック 様</h1>
+        <p>求人者マイページ（ホーム）</p>
       </div>
-      <section class="grid-3">
-        <article class="card stat-card"><strong>3</strong><span>掲載中の求人</span></article>
-        <article class="card stat-card orange"><strong>5</strong><span>未確認の応募</span></article>
-        <article class="card stat-card green"><strong>2</strong><span>面談予定</span></article>
+
+      <section class="notice-list" aria-label="お知らせ">
+        <div class="notice-card match">
+          <span>🎉</span>
+          <p>「理学療法士（PT）（整形外科クリニック・新設リハ室）」で <strong>田中 太郎</strong> さんとのマッチングが成立しました！</p>
+          <a href="employer-jobs.html">通知を確認／チャットルームへ</a>
+        </div>
+        <div class="notice-card match">
+          <span>🎉</span>
+          <p>「放射線技師（健診・一般撮影／土日休み）」で <strong>鈴木 一郎</strong> さんとのマッチングが成立しました！</p>
+          <a href="employer-jobs.html">通知を確認／チャットルームへ</a>
+        </div>
+        <div class="notice-card info">
+          <span>📨</span>
+          <p>選考待ちの応募が <strong>1件</strong> あります。</p>
+          <a href="employer-jobs.html">掲載求人管理から確認する</a>
+        </div>
       </section>
-      <section class="grid-2" style="margin-top: 34px;">
-        <a class="card quick-card" href="employer-job-post.html"><span class="quick-icon">📝</span><span><h2>求人を作成する</h2><p>職種・勤務条件・給与を登録</p></span></a>
-        <a class="card quick-card" href="employer-applicants.html"><span class="quick-icon">👤</span><span><h2>応募者を確認する</h2><p>プロフィール・履歴書・資格証を確認</p></span></a>
+
+      <section class="grid-3" aria-label="求人状況">
+        <article class="card stat-card green"><strong>7</strong><span>掲載中の求人</span></article>
+        <article class="card stat-card"><strong>1</strong><span>選考中の応募者</span></article>
+        <article class="card stat-card orange"><strong>2</strong><span>マッチング成立</span></article>
       </section>
+
+      <section class="grid-2" style="margin-top: 34px;" aria-label="求人者メニュー">
+        <a class="card quick-card" href="employer-job-new.html">
+          <span class="quick-icon">📝</span>
+          <span><h2>求人広告 新規作成</h2><p>掲載は無料。採用決定時のみ成功報酬が発生します</p></span>
+        </a>
+        <a class="card quick-card" href="employer-jobs.html">
+          <span class="quick-icon">📄</span>
+          <span><h2>掲載求人管理・一覧</h2><p>掲載中の求人の確認・応募者の選考</p></span>
+        </a>
+      </section>
+
+      <footer class="mock-footer">
+        <span>医療特化型広告マッチングシステム プロトタイプ V1</span>
+        <a href="admin-home.html">デモデータを初期化</a>
+      </footer>
     </div>
   </main>
 </body>
 </html>
-
