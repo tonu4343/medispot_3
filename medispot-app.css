@@ -141,6 +141,13 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(0,157,139,.1
 .employer-job-list { margin-top: 24px; }
 .create-job-button { margin-bottom: 0; min-width: 230px; }
 .job-new-form { padding: 34px; }
+.job-detail-card h2 { margin: 0 0 8px; font-size: 28px; line-height: 1.35; }
+.detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 28px 0; }
+.detail-grid div { min-height: 92px; display: grid; align-content: center; gap: 4px; padding: 18px; background: var(--mint); border: 1px solid #c5e7e1; border-radius: 8px; }
+.detail-grid span { color: var(--muted); font-size: 13px; font-weight: 800; }
+.detail-grid strong { font-size: 18px; }
+.clean-list { display: grid; gap: 8px; margin: 0 0 22px; padding-left: 1.3em; font-weight: 700; }
+.applicant-card .job-actions .btn { min-width: 180px; }
 
 .notice-list { display: grid; gap: 18px; margin-bottom: 24px; }
 .notice-card {
@@ -177,6 +184,7 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(0,157,139,.1
   .user-pill { margin-left: 0; }
   .app-nav { width: 100%; overflow-x: auto; padding-bottom: 4px; }
   .grid-3, .grid-2, .content-grid, .job-search { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: 1fr; }
   .repeat-row { grid-template-columns: 1fr; }
   .actions { grid-template-columns: 1fr; }
   .notice-card { grid-template-columns: 28px 1fr; }

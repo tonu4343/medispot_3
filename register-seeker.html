@@ -9,13 +9,10 @@
 <body>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">＋</span>
-        <span>MediSpot</span>
-      </a>
+      <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
       <div class="header-links">
         <a class="btn secondary" href="register.html">登録タイプを選ぶ</a>
-        <a class="btn primary" href="register-employer.html">採用担当者はこちら</a>
+        <a class="btn primary" href="register-employer.html">求人者はこちら</a>
       </div>
     </div>
   </header>
@@ -26,7 +23,7 @@
         <div class="form-head">
           <div>
             <h1 id="seeker-title">求職者登録</h1>
-            <p>医療資格と希望条件を登録して、スポット求人を探しやすくします。</p>
+            <p>医療資格と希望条件を登録して、スポット求人や常勤求人を探しやすくします。</p>
           </div>
           <span class="role-pill">求職者</span>
         </div>
@@ -35,26 +32,11 @@
           <input type="hidden" name="role" value="seeker">
           <h2 class="section-title">アカウント情報</h2>
           <div class="field-grid">
-            <div class="field">
-              <label for="last-name">姓</label>
-              <input id="last-name" name="last_name" autocomplete="family-name" required>
-            </div>
-            <div class="field">
-              <label for="first-name">名</label>
-              <input id="first-name" name="first_name" autocomplete="given-name" required>
-            </div>
-            <div class="field full">
-              <label for="email">メールアドレス</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="password">パスワード</label>
-              <input id="password" name="password" type="password" autocomplete="new-password" required>
-            </div>
-            <div class="field">
-              <label for="phone">電話番号</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel">
-            </div>
+            <div class="field"><label for="last-name">姓</label><input id="last-name" name="last_name" autocomplete="family-name" required></div>
+            <div class="field"><label for="first-name">名</label><input id="first-name" name="first_name" autocomplete="given-name" required></div>
+            <div class="field full"><label for="email">メールアドレス</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="password">パスワード</label><input id="password" name="password" type="password" autocomplete="new-password" required></div>
+            <div class="field"><label for="phone">電話番号</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
           </div>
 
           <h2 class="section-title">資格・希望条件</h2>
@@ -72,27 +54,18 @@
                 <option>ヘルパー</option>
               </select>
             </div>
-            <div class="field">
-              <label for="license">資格番号</label>
-              <input id="license" name="license_number" placeholder="後から登録も可能">
-            </div>
-            <div class="field">
-              <label for="area">希望勤務地</label>
-              <input id="area" name="area" placeholder="例：東京都、神奈川県">
-            </div>
+            <div class="field"><label for="license">資格番号</label><input id="license" name="license_number" placeholder="後から登録も可能"></div>
+            <div class="field"><label for="area">希望勤務地</label><input id="area" name="area" placeholder="例：東京都、神奈川県"></div>
             <div class="field">
               <label for="work-style">希望勤務形態</label>
               <select id="work-style" name="work_style">
                 <option>スポット勤務</option>
                 <option>週1日から</option>
                 <option>午前・午後のみ</option>
-                <option>業務委託</option>
+                <option>常勤</option>
               </select>
             </div>
-            <div class="field full">
-              <label for="message">希望条件・自己紹介</label>
-              <textarea id="message" name="message" placeholder="勤務可能な曜日、経験領域、希望時給など"></textarea>
-            </div>
+            <div class="field full"><label for="message">希望条件・自己紹介</label><textarea id="message" name="message" placeholder="勤務可能な曜日、経験領域、希望時給など"></textarea></div>
           </div>
 
           <label class="check-row">
@@ -119,7 +92,7 @@
         </section>
         <section class="aside-card">
           <h2>モック画面を確認</h2>
-          <p>登録をしなくても、求職者向けのモック画面を確認できます。</p>
+          <p>登録をしなくても、求職者側のモック画面を確認できます。</p>
           <div class="mock-links">
             <a class="btn primary" href="seeker-home.html">マイページを見る</a>
             <a class="btn secondary" href="seeker-profile.html">プロフィールを見る</a>

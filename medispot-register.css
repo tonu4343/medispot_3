@@ -395,6 +395,14 @@ textarea:focus {
   width: 100%;
 }
 
+.mock-card {
+  min-height: 360px;
+}
+
+.mock-card .mock-links {
+  margin-top: auto;
+}
+
 .mini-steps {
   display: grid;
   gap: 12px;

@@ -1,20 +1,20 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MediSpot | 応募者確認</title>
+  <title>MediSpot | 応募者一覧</title>
   <link rel="stylesheet" href="medispot-app.css">
 </head>
 <body>
   <header class="app-header">
     <div class="shell header-inner">
       <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
-      <span class="user-pill">求人者：ブランチ総合クリニック</span>
+      <span class="user-pill employer">求人者：ブランチ総合クリニック</span>
       <nav class="app-nav" aria-label="求人者メニュー">
         <a href="employer-home.html">マイページ</a>
-        <a href="employer-job-post.html">求人作成</a>
-        <a class="active" href="employer-applicants.html">応募者確認</a>
+        <a href="employer-job-new.html">求人作成</a>
+        <a class="active" href="employer-jobs.html">掲載求人管理</a>
         <a href="login.html">ログアウト</a>
       </nav>
     </div>
@@ -23,25 +23,34 @@
   <main class="page">
     <div class="shell">
       <div class="page-head">
-        <h1>応募者確認</h1>
+        <h1>応募者一覧（選考）</h1>
         <p>応募者のプロフィール、履歴書、資格情報を確認できます。</p>
       </div>
+      <a class="btn secondary" href="employer-jobs.html">掲載求人管理へ戻る</a>
+
       <section class="job-list">
-        <article class="card job-card">
-          <div class="tag-row"><span class="tag blue">看護師</span><span class="tag">経験 7〜9年</span><span class="tag orange">面談調整中</span></div>
+        <article class="card job-card applicant-card">
+          <div class="tag-row"><span class="tag blue">看護師</span><span class="tag">経験 7〜9年</span><span class="tag orange">選考待ち</span></div>
           <h2>佐藤 花子</h2>
-          <div class="job-meta"><span>応募求人：【日勤のみ】外来看護師（ブランクOK・週3日〜）</span><span>希望：週3日程度の日勤帯／東京都世田谷区周辺</span><span>資格証：看護師免許証.jpg、BLSプロバイダーカード.jpg</span></div>
-          <div class="job-footer"><span></span><button class="btn primary" type="button">詳細を見る</button></div>
+          <div class="job-meta">
+            <span>応募求人：【日勤のみ】外来看護師（ブランクOK・週3日〜）</span>
+            <span>希望：週3日程度の日勤帯／東京都世田谷区周辺</span>
+            <span>資格証：看護師免許証.jpg、BLSプロバイダーカード.jpg</span>
+          </div>
+          <div class="job-footer"><span></span><div class="job-actions"><button class="btn primary employer-btn" type="button">プロフィール確認</button><button class="btn secondary" type="button">面談日を調整</button></div></div>
         </article>
-        <article class="card job-card">
-          <div class="tag-row"><span class="tag blue">理学療法士</span><span class="tag">経験 3〜6年</span><span class="tag">未確認</span></div>
+        <article class="card job-card applicant-card">
+          <div class="tag-row"><span class="tag blue">理学療法士</span><span class="tag">経験 3〜6年</span><span class="tag green">マッチング成立</span></div>
           <h2>山田 太郎</h2>
-          <div class="job-meta"><span>応募求人：理学療法士（PT）（整形外科クリニック・新設リハ室）</span><span>希望：常勤／東京都調布市周辺</span></div>
-          <div class="job-footer"><span></span><button class="btn primary" type="button">詳細を見る</button></div>
+          <div class="job-meta">
+            <span>応募求人：理学療法士（PT）（整形外科クリニック・新設リハ室）</span>
+            <span>希望：常勤／東京都調布市周辺</span>
+            <span>自己PR：整形外科リハビリと患者対応を中心に経験があります。</span>
+          </div>
+          <div class="job-footer"><span></span><div class="job-actions"><button class="btn primary employer-btn" type="button">プロフィール確認</button><button class="btn secondary" type="button">チャットルームへ</button></div></div>
         </article>
       </section>
     </div>
   </main>
 </body>
 </html>
-
