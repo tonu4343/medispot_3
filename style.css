@@ -198,6 +198,17 @@ a { color: inherit; text-decoration: none; }
 .testimonial-grid h3 { margin: 0 0 9px; font-size: 13px; }
 .testimonial-grid p { margin: 0; font-size: 11px; }
 
+.faq-list { display: grid; gap: 14px; }
+.faq-list article {
+  padding: 20px 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.035);
+}
+.faq-list h3 { margin: 0 0 8px; color: var(--teal-dark); font-size: 17px; }
+.faq-list p { margin: 0; color: var(--muted); font-size: 13px; font-weight: 700; }
+
 .final-cta { min-height: 170px; display: grid; grid-template-columns: 44% 56%; background: linear-gradient(100deg, #eaf7fb, #fff); overflow: hidden; }
 .final-photo img { width: 100%; height: 100%; object-fit: cover; }
 .final-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 20px 45px; }
