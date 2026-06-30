@@ -138,7 +138,7 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(0,157,139,.1
 .job-card h2 { margin: 0 0 12px; font-size: 24px; line-height: 1.35; }
 .job-meta { display: grid; gap: 9px; color: var(--muted); font-weight: 700; }
 .job-footer { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.status-pill { padding: 8px 13px; color: var(--teal-dark); background: var(--mint); border-radius: 999px; font-weight: 900; }
+.status-pill { display: inline-flex; align-items: center; justify-content: center; min-width: max-content; padding: 8px 13px; color: var(--teal-dark); background: var(--mint); border-radius: 999px; font-weight: 900; white-space: nowrap; }
 .job-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
 .employer-post { padding: 28px; }
 .employer-job-list { margin-top: 24px; }
@@ -335,12 +335,14 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(0,157,139,.1
 }
 .table-btn {
   min-height: 34px;
+  min-width: max-content;
   padding: 0 12px;
   color: var(--teal-dark);
   background: #fff;
   border: 1px solid #bce8df;
   border-radius: 6px;
   font-weight: 900;
+  white-space: nowrap;
   cursor: pointer;
 }
 .status-pill.green {
