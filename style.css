@@ -192,8 +192,8 @@ a { color: inherit; text-decoration: none; }
 .device-art img + img { width: 190px; margin-left: -85px; }
 
 .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.testimonial-grid article { min-height: 142px; display: grid; grid-template-columns: 115px 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; }
-.testimonial-grid img { width: 100%; height: 100%; object-fit: cover; object-position: 45% top; }
+.testimonial-grid article { min-height: 142px; display: grid; grid-template-columns: 126px 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.testimonial-grid img { width: 100%; height: 100%; padding: 12px 8px 0; object-fit: contain; object-position: center bottom; background: #f6fbfb; }
 .testimonial-grid div { padding: 17px 14px; }
 .testimonial-grid h3 { margin: 0 0 9px; font-size: 13px; }
 .testimonial-grid p { margin: 0; font-size: 11px; }
@@ -312,7 +312,7 @@ footer { padding: 24px 0 10px; }
   .pricing { grid-template-columns: 1fr; padding: 14px; }
   .price-box { margin: 0; }
   .price-copy { padding: 24px 5px 8px; }
-  .testimonial-grid article { grid-template-columns: 100px 1fr; }
+  .testimonial-grid article { grid-template-columns: 112px 1fr; }
   .final-cta { grid-template-columns: 1fr; }
   .final-photo { height: 150px; }
   .final-copy { padding: 22px 18px; }
