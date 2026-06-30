@@ -103,10 +103,23 @@ a { color: inherit; text-decoration: none; }
   padding: 62px 0 80px;
 }
 
+.register-page {
+  background:
+    linear-gradient(90deg, rgba(223, 247, 239, .75), rgba(255, 255, 255, .45) 36%, rgba(255, 242, 204, .45)),
+    #f8fbfb;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, .92fr) minmax(320px, 1.08fr);
   gap: 36px;
+  align-items: start;
+}
+
+.register-hero {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(420px, 1fr);
+  gap: 42px;
   align-items: start;
 }
 
@@ -237,6 +250,89 @@ h1 {
 
 .choice-card .btn {
   margin-top: auto;
+}
+
+.register-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.register-choice {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 18px 20px;
+  padding: 30px;
+}
+
+.register-choice .choice-icon {
+  margin-bottom: 0;
+}
+
+.register-choice .choice-label {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.register-choice.employer .choice-label {
+  color: #845800;
+}
+
+.register-choice .btn {
+  grid-column: 2;
+  width: min(280px, 100%);
+}
+
+.mock-section {
+  margin-top: 42px;
+}
+
+.mock-head {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.mock-head h2 {
+  margin-bottom: 8px;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.mock-head p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.mock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mock-card.compact {
+  min-height: 0;
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(20, 60, 70, .08);
+}
+
+.mock-card.compact h3 {
+  margin-bottom: 12px;
+  color: var(--teal-dark);
+  font-size: 20px;
+}
+
+.mock-card.compact.employer h3 {
+  color: #845800;
+}
+
+.mock-card.compact.admin h3 {
+  color: #374151;
 }
 
 .form-layout {
@@ -448,6 +544,7 @@ textarea:focus {
 
 @media (max-width: 940px) {
   .hero,
+  .register-hero,
   .form-layout {
     grid-template-columns: 1fr;
   }
@@ -457,6 +554,10 @@ textarea:focus {
   }
 
   .choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mock-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -486,6 +587,15 @@ textarea:focus {
   .form-card,
   .aside-card {
     padding: 20px;
+  }
+
+  .register-choice {
+    grid-template-columns: 1fr;
+  }
+
+  .register-choice .btn {
+    grid-column: auto;
+    width: 100%;
   }
 
   .field-grid,

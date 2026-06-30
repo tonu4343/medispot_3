@@ -10,58 +10,61 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark">＋</span>
+        <span class="brand-mark">+</span>
         <span>MediSpot</span>
       </a>
       <div class="header-links">
         <a class="btn secondary" href="index.html#jobs">求人を見る</a>
-        <a class="btn primary" href="register-seeker.html">求職者はこちら</a>
+        <a class="btn primary" href="login.html">ログイン</a>
       </div>
     </div>
   </header>
 
-  <main class="page">
-    <div class="shell hero">
+  <main class="page register-page">
+    <div class="shell register-hero">
       <section class="intro" aria-labelledby="register-title">
-        <span class="eyebrow">登録タイプを選ぶ</span>
-        <h1 id="register-title">利用目的に合わせて登録を始めましょう。</h1>
-        <p class="lead">求職者と医療機関では必要な情報が異なります。最初に登録タイプを選ぶことで、入力項目を分かりやすく整理できます。</p>
+        <span class="eyebrow">新規会員登録</span>
+        <h1 id="register-title">どちらの立場で利用しますか？</h1>
+        <p class="lead">MediSpotは、求職者と医療機関で登録内容が異なります。最初に登録タイプを選ぶと、必要な入力項目だけを表示します。</p>
         <ul class="note-list">
           <li><span>1</span>求職者はプロフィール・履歴書・希望条件を登録</li>
           <li><span>2</span>医療機関は施設情報・採用ニーズ・求人条件を登録</li>
-          <li><span>3</span>登録後はそれぞれのマイページからモック画面を確認</li>
+          <li><span>3</span>登録後は、それぞれのマイページから求人や応募状況を確認</li>
         </ul>
       </section>
 
-      <section class="choice-grid" aria-label="登録タイプ">
-        <article class="choice-card">
+      <section class="register-panel" aria-label="登録タイプ">
+        <article class="choice-card register-choice">
           <div class="choice-icon">人</div>
-          <h2>求職者として登録</h2>
-          <p>看護師・検査技師・リハビリ職など、医療資格や経験を活かして求人を探したい方向けです。</p>
-          <ul>
-            <li>職種・資格・経験年数を登録</li>
-            <li>希望エリアと勤務条件を設定</li>
-            <li>求人検索・応募状況を確認</li>
-          </ul>
+          <div>
+            <span class="choice-label">医療資格者向け</span>
+            <h2>求職者として登録</h2>
+            <p>看護師・検査技師・リハビリ職など、医療資格や経験を活かして求人を探したい方向けです。</p>
+          </div>
           <a class="btn primary" href="register-seeker.html">求職者登録へ</a>
         </article>
 
-        <article class="choice-card employer">
+        <article class="choice-card register-choice employer">
           <div class="choice-icon">院</div>
-          <h2>医療機関として登録</h2>
-          <p>病院・クリニック・薬局など、医療専門職を採用したい施設・法人向けです。</p>
-          <ul>
-            <li>施設情報と担当者情報を登録</li>
-            <li>求人広告を作成・掲載</li>
-            <li>応募者と選考状況を管理</li>
-          </ul>
+          <div>
+            <span class="choice-label">採用施設向け</span>
+            <h2>医療機関として登録</h2>
+            <p>病院・クリニック・薬局など、医療専門職を採用したい施設・法人向けです。</p>
+          </div>
           <a class="btn secondary" href="register-employer.html">医療機関登録へ</a>
         </article>
+      </section>
+    </div>
 
-        <article class="choice-card mock-card">
-          <div class="choice-icon">求</div>
-          <h2>求職者モックを確認</h2>
-          <p>登録前でも、求職者側のマイページ・プロフィール・履歴書・求人検索画面を確認できます。</p>
+    <section class="shell mock-section" aria-labelledby="mock-title">
+      <div class="mock-head">
+        <span class="eyebrow">画面確認</span>
+        <h2 id="mock-title">登録前にモック画面を確認できます</h2>
+        <p>デザイン確認用の導線です。登録せずに各マイページや管理画面を確認できます。</p>
+      </div>
+      <div class="mock-grid">
+        <article class="mock-card compact">
+          <h3>求職者モック</h3>
           <div class="mock-links">
             <a class="btn secondary" href="seeker-home.html">マイページ</a>
             <a class="btn secondary" href="seeker-profile.html">プロフィール</a>
@@ -70,24 +73,30 @@
           </div>
         </article>
 
-        <article class="choice-card mock-card employer">
-          <div class="choice-icon">求</div>
-          <h2>求人者モックを確認</h2>
-          <p>医療機関側のホーム・求人作成・掲載求人管理画面を登録前に確認できます。</p>
+        <article class="mock-card compact employer">
+          <h3>求人者モック</h3>
           <div class="mock-links">
             <a class="btn secondary" href="employer-home.html">マイページ</a>
             <a class="btn secondary" href="employer-job-new.html">求人作成</a>
             <a class="btn secondary" href="employer-jobs.html">掲載求人管理</a>
-            <a class="btn secondary" href="admin-home.html">管理者モック</a>
           </div>
         </article>
-      </section>
-    </div>
+
+        <article class="mock-card compact admin">
+          <h3>管理者モック</h3>
+          <div class="mock-links">
+            <a class="btn secondary" href="admin-home.html">管理者ホーム</a>
+            <a class="btn secondary" href="admin-seekers.html">求職者管理</a>
+            <a class="btn secondary" href="admin-payments.html">成功報酬管理</a>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="shell footer-inner">
-      <span>＋ MediSpot</span>
+      <span>+ MediSpot</span>
       <span>© 2026 MediSpot. All Rights Reserved.</span>
     </div>
   </footer>
