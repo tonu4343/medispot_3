@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | 請求・支払い</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
+      <span class="user-pill employer">求人者：ブランチ総合クリニック</span>
+      <nav class="app-nav" aria-label="求人者メニュー">
+        <a href="employer-home.html">マイページ</a>
+        <a href="employer-job-new.html">求人作成</a>
+        <a href="employer-jobs.html">掲載求人管理</a>
+        <a class="active" href="employer-payments.html">請求・支払い</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell">
+      <div class="listing-head">
+        <div>
+          <span class="eyebrow-lite">Stripe Mock</span>
+          <h1>請求・支払い</h1>
+          <p>採用成立後の成功報酬を確認し、Stripe決済画面へ進むモックです。</p>
+        </div>
+      </div>
+
+      <section class="metric-strip employer-strip" aria-label="請求状況">
+        <article><strong>1</strong><span>支払い待ち</span></article>
+        <article><strong>3,300円</strong><span>未払い合計</span></article>
+        <article><strong>1</strong><span>支払い済み</span></article>
+      </section>
+
+      <section class="card admin-table-card">
+        <div class="section-title-row">
+          <h2>請求一覧</h2>
+          <span class="section-note">成功報酬：1名採用あたり3,300円（税込）</span>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>請求番号</th><th>成立案件</th><th>求職者</th><th>金額</th><th>状態</th><th>操作</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>INV-2026-001</td>
+                <td>理学療法士 常勤</td>
+                <td>山田 太郎</td>
+                <td>3,300円（税込）</td>
+                <td><span class="status-pill warning">支払い待ち</span></td>
+                <td><a class="table-btn" href="employer-payment-detail.html">支払いへ</a></td>
+              </tr>
+              <tr>
+                <td>INV-2026-000</td>
+                <td>外来看護師 週3日</td>
+                <td>佐藤 花子</td>
+                <td>3,300円（税込）</td>
+                <td><span class="status-pill green">支払い済み</span></td>
+                <td><a class="table-btn" href="payment-success.html">領収書</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | Stripe決済モック</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <main class="payment-page">
+    <section class="stripe-shell">
+      <div class="stripe-summary">
+        <a class="brand" href="employer-payment-detail.html"><span class="brand-mark">＋</span><span>MediSpot</span></a>
+        <span class="eyebrow-lite">Stripe Checkout Mock</span>
+        <h1>成功報酬のお支払い</h1>
+        <p>理学療法士 常勤 / 山田 太郎 さん採用成立分</p>
+        <strong class="stripe-price">3,300円</strong>
+        <small>税込 / テスト画面のため実際の決済は行われません。</small>
+      </div>
+
+      <form class="card stripe-form">
+        <h2>カード情報</h2>
+        <div class="field">
+          <label for="email">メールアドレス</label>
+          <input id="email" type="email" value="employer-demo@medispot.jp">
+        </div>
+        <div class="field">
+          <label for="card">カード番号</label>
+          <input id="card" type="text" value="4242 4242 4242 4242">
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="exp">有効期限</label>
+            <input id="exp" type="text" value="12 / 30">
+          </div>
+          <div class="field">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="text" value="123">
+          </div>
+        </div>
+        <a class="btn primary employer-btn auth-submit" href="payment-success.html">3,300円を支払う</a>
+        <a class="auth-link" href="employer-payment-detail.html">請求詳細へ戻る</a>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
