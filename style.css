@@ -242,6 +242,7 @@ footer { padding: 24px 0 10px; }
 .auth-link { text-align: center; margin-top: 18px; }
 .auth-link a { color: var(--teal); font-weight: 800; }
 .demo-login { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.demo-login button:last-child { grid-column: 1 / -1; }
 .demo-login button { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--teal-dark); font-weight: 800; cursor: pointer; }
 .demo-login button:hover { background: var(--mint); }
 

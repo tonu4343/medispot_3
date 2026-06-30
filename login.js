@@ -30,11 +30,13 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
 });
 
 document.getElementById("seekerDemo").addEventListener("click", () => {
-  document.getElementById("email").value = "seeker-demo@medispot.jp";
-  document.getElementById("password").value = "password123";
+  location.href = "seeker-home.html";
 });
 
 document.getElementById("employerDemo").addEventListener("click", () => {
-  document.getElementById("email").value = "employer-demo@medispot.jp";
-  document.getElementById("password").value = "password123";
+  location.href = "employer-home.html";
+});
+
+document.getElementById("adminDemo").addEventListener("click", () => {
+  location.href = "admin-home.html";
 });
