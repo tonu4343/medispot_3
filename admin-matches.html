@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | マッチング管理</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">+</span><span>MediSpot</span></a>
+      <span class="user-pill admin-pill">管理者：運営担当</span>
+      <nav class="app-nav" aria-label="管理者メニュー">
+        <a href="admin-home.html">管理画面</a>
+        <a href="seeker-home.html">求職者画面</a>
+        <a href="employer-home.html">求人者画面</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell admin-layout">
+      <aside class="card admin-sidebar">
+        <h2>管理メニュー</h2>
+        <a href="admin-home.html">ダッシュボード</a>
+        <a href="admin-seekers.html">求職者管理</a>
+        <a href="admin-employers.html">医療機関管理</a>
+        <a href="admin-jobs.html">求人管理</a>
+        <a href="admin-applications.html">応募・選考管理</a>
+        <a class="active" href="admin-matches.html">マッチング管理</a>
+        <a href="admin-payments.html">成功報酬管理</a>
+      </aside>
+
+      <section class="admin-main">
+        <div class="listing-head">
+          <div>
+            <span class="eyebrow-lite">Matches</span>
+            <h1>マッチング管理</h1>
+            <p>採用成立したマッチング、請求準備、入金状況をまとめて確認します。</p>
+          </div>
+          <a class="btn secondary" href="admin-payments.html">成功報酬管理へ</a>
+        </div>
+
+        <section class="metric-strip admin-metrics" aria-label="マッチング指標">
+          <article><strong>5</strong><span>成立済み</span></article>
+          <article><strong>2</strong><span>請求準備</span></article>
+          <article><strong>1</strong><span>入金待ち</span></article>
+          <article><strong>2</strong><span>入金済み</span></article>
+        </section>
+
+        <section class="card admin-table-card">
+          <div class="section-title-row">
+            <h2>成立マッチング一覧</h2>
+            <a href="admin-applications.html">応募・選考管理へ</a>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>求職者</th>
+                  <th>求人</th>
+                  <th>医療機関</th>
+                  <th>成立日</th>
+                  <th>請求額</th>
+                  <th>状態</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>山田 太郎</td>
+                  <td>理学療法士 常勤</td>
+                  <td>ブランチ総合クリニック</td>
+                  <td>2026/06/28</td>
+                  <td>3,300円（税込）</td>
+                  <td><span class="status-pill warning">請求準備</span></td>
+                  <td><button class="table-btn">請求作成</button></td>
+                </tr>
+                <tr>
+                  <td>鈴木 一郎</td>
+                  <td>放射線技師 土日休み</td>
+                  <td>中央健診センター</td>
+                  <td>2026/06/27</td>
+                  <td>3,300円（税込）</td>
+                  <td><span class="status-pill">入金待ち</span></td>
+                  <td><button class="table-btn">入金確認</button></td>
+                </tr>
+                <tr>
+                  <td>佐藤 花子</td>
+                  <td>外来看護師 週3日</td>
+                  <td>ブランチ総合クリニック</td>
+                  <td>2026/06/25</td>
+                  <td>3,300円（税込）</td>
+                  <td><span class="status-pill green">入金済み</span></td>
+                  <td><button class="table-btn">詳細</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
