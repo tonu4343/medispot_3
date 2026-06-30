@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediSpot | ユーザー管理</title>
+  <link rel="stylesheet" href="medispot-app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">+</span><span>MediSpot</span></a>
+      <span class="user-pill admin-pill">管理者：運営担当</span>
+      <nav class="app-nav" aria-label="管理者メニュー">
+        <a href="admin-home.html">管理画面</a>
+        <a href="seeker-home.html">求職者画面</a>
+        <a href="employer-home.html">求人者画面</a>
+        <a href="login.html">ログアウト</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="shell admin-layout">
+      <aside class="card admin-sidebar">
+        <h2>管理メニュー</h2>
+        <a href="admin-home.html">ダッシュボード</a>
+        <a class="active" href="admin-users.html">ユーザー管理</a>
+        <a href="admin-seekers.html">求職者管理</a>
+        <a href="admin-employers.html">医療機関管理</a>
+        <a href="admin-jobs.html">求人管理</a>
+        <a href="admin-applications.html">応募・選考管理</a>
+        <a href="admin-matches.html">マッチング管理</a>
+        <a href="admin-payments.html">成功報酬管理</a>
+      </aside>
+
+      <section class="admin-main">
+        <div class="listing-head">
+          <div>
+            <span class="eyebrow-lite">Users</span>
+            <h1>ユーザー管理</h1>
+            <p>求職者、医療機関、管理者アカウントの登録状況と利用状態を確認します。</p>
+          </div>
+          <a class="btn secondary" href="admin-seekers.html">求職者管理へ</a>
+        </div>
+
+        <section class="metric-strip admin-metrics" aria-label="ユーザー指標">
+          <article><strong>24</strong><span>求職者</span></article>
+          <article><strong>8</strong><span>医療機関</span></article>
+          <article><strong>2</strong><span>管理者</span></article>
+          <article><strong>3</strong><span>確認待ち</span></article>
+        </section>
+
+        <section class="card search-panel" aria-label="ユーザー検索">
+          <div class="job-search compact-search">
+            <div class="field">
+              <label for="keyword">キーワード</label>
+              <input id="keyword" type="search" placeholder="名前・メール・施設名">
+            </div>
+            <div class="field">
+              <label for="role">種別</label>
+              <select id="role">
+                <option>すべて</option>
+                <option>求職者</option>
+                <option>医療機関</option>
+                <option>管理者</option>
+              </select>
+            </div>
+            <button class="btn primary" type="button">検索</button>
+          </div>
+        </section>
+
+        <section class="card admin-table-card">
+          <div class="section-title-row">
+            <h2>ユーザー一覧</h2>
+            <a href="admin-employers.html">医療機関管理へ</a>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>名前</th>
+                  <th>種別</th>
+                  <th>メール</th>
+                  <th>登録日</th>
+                  <th>状態</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>佐藤 花子</td>
+                  <td>求職者</td>
+                  <td>seeker-demo@medispot.jp</td>
+                  <td>2026/06/20</td>
+                  <td><span class="status-pill green">有効</span></td>
+                  <td><button class="table-btn">詳細</button></td>
+                </tr>
+                <tr>
+                  <td>ブランチ総合クリニック</td>
+                  <td>医療機関</td>
+                  <td>employer-demo@medispot.jp</td>
+                  <td>2026/06/18</td>
+                  <td><span class="status-pill warning">確認待ち</span></td>
+                  <td><button class="table-btn">確認</button></td>
+                </tr>
+                <tr>
+                  <td>運営担当</td>
+                  <td>管理者</td>
+                  <td>admin@medispot.jp</td>
+                  <td>2026/06/10</td>
+                  <td><span class="status-pill green">有効</span></td>
+                  <td><button class="table-btn">権限確認</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
